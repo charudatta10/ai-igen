@@ -8,6 +8,6 @@ pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float
 
 pipe.to("cuda")
 
-prompt = "A futuristic cyberpunk city at night with neon lights"
+prompt = input("Enter a prompt: ")
 image = pipe(prompt).images[0]
 image.show()
